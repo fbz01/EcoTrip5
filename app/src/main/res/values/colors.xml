@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primära färger -->
+    <color name="colorPrimary">#BFD9D0</color>
+    <color name="colorPrimaryVariant">#3700B3</color>
+    <color name="colorSecondary">#000000</color>
+
+    <!-- Bakgrund och text -->
+    <color name="colorBackground">#FFF9F2</color>
+    <color name="colorOnPrimary">#4F4B4B</color>
+    <color name="colorOnSecondary">#000000</color>
+</resources>
