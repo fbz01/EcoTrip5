@@ -9,4 +9,16 @@
         <item name="android:textColorPrimary">@color/colorOnPrimary</item>
     </style>
 
+    <style name="Theme.MyApp.FullScreenDialog" parent="Base.Theme.EcoTrip5">
+        <!-- Gör dialogen fullskärm genom att sätta fönstermatchning -->
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+
+
 </resources>

@@ -6,7 +6,7 @@
     <color name="colorSecondary">#000000</color>
 
     <!-- Bakgrund och text -->
-    <color name="colorBackground">#FFF9F2</color>
+    <color name="colorBackground">#FFFDF6</color>
     <color name="colorOnPrimary">#4F4B4B</color>
     <color name="colorOnSecondary">#000000</color>
 </resources>
