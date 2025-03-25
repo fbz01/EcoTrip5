@@ -28,11 +28,26 @@
         android:layout_marginEnd="165dp"
         android:layout_marginBottom="638dp"
         android:text="Dina resor"
+        android:textColor="@color/colorOnPrimary"
         android:textSize="50sp"
         android:textStyle="bold"
-        android:textColor="@color/colorOnPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_resor"
+        android:layout_width="match_parent"
+        android:layout_height="526dp"
+        android:layout_marginTop="151dp"
+        android:layout_marginBottom="152dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+

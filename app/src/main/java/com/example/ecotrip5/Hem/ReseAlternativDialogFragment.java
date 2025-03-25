@@ -31,7 +31,7 @@ public class ReseAlternativDialogFragment extends DialogFragment {
                               Bundle savedInstanceState) {
 
         // Blås upp layouten för resealternativ
-        View rootView = inflater.inflate(R.layout.fragment_rese_alternativ, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_rese_alternativ_dialog, container, false);
 
         // Exempel: hämta en knapp i layouten för att stänga dialogen
         Button closeButton = rootView.findViewById(R.id.btnCloseDialog);
