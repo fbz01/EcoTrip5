@@ -15,12 +15,12 @@ import com.example.ecotrip5.R;
 
 import java.util.List;
 
-public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder> {
+public class ResAdapter extends RecyclerView.Adapter<ResAdapter.TripViewHolder> {
 
-    private List<Trip> tripList;
+    private List<Resa> resaList;
 
-    public TripAdapter(List<Trip> tripList) {
-        this.tripList = tripList;
+    public ResAdapter(List<Resa> resaList) {
+        this.resaList = resaList;
     }
 
 
@@ -34,8 +34,8 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
 
     @Override
     public void onBindViewHolder( TripViewHolder holder, int position) {
-        Trip trip = tripList.get(position);
-        holder.tvTripTitle.setText(trip.getTitle());
+        Resa resa = resaList.get(position);
+        holder.tvTripTitle.setText(resa.getTitle());
 
         // Klick på "Välj Resa"-knappen
         holder.btnSelectTrip.setOnClickListener(v -> {
@@ -52,7 +52,7 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
 
     @Override
     public int getItemCount() {
-        return tripList.size();
+        return resaList.size();
     }
 
     // ViewHolder för en item

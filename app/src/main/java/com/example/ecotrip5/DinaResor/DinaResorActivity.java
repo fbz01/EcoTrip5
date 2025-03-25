@@ -11,8 +11,8 @@ import java.util.List;
 public class DinaResorActivity extends BasActivity {
 
     private RecyclerView recyclerView;
-    private TripAdapter tripAdapter;
-    private List<Trip> tripList;
+    private ResAdapter resAdapter;
+    private List<Resa> resaList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +26,10 @@ public class DinaResorActivity extends BasActivity {
         setSelectedNavItem(R.id.nav_second);
 
         // 3) Initiera listan med resor
-        tripList = new ArrayList<>();
-        tripList.add(new Trip("Resa 1: Stockholm - Göteborg"));
-        tripList.add(new Trip("Resa 2: Malmö - Uppsala"));
-        tripList.add(new Trip("Resa 3: Kiruna - Luleå"));
+        resaList = new ArrayList<>();
+        resaList.add(new Resa("Resa 1: Stockholm - Göteborg"));
+        resaList.add(new Resa("Resa 2: Malmö - Uppsala"));
+        resaList.add(new Resa("Resa 3: Kiruna - Luleå"));
 
         // 4) Hitta RecyclerView
         recyclerView = findViewById(R.id.recycler_resor);
@@ -38,9 +38,9 @@ public class DinaResorActivity extends BasActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // 6) Skapa adapter
-        tripAdapter = new TripAdapter(tripList);
+        resAdapter = new ResAdapter(resaList);
 
         // 7) Koppla adapter till RecyclerView
-        recyclerView.setAdapter(tripAdapter);
+        recyclerView.setAdapter(resAdapter);
     }
 }

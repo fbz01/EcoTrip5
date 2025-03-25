@@ -1,9 +1,9 @@
 package com.example.ecotrip5.DinaResor;
 
-public class Trip {
+public class Resa {
     private String title;
 
-    public Trip(String title) {
+    public Resa(String title) {
         this.title = title;
     }
 
