@@ -24,12 +24,8 @@ public class ReseAlternativDialogFragment extends DialogFragment {
         setStyle(DialogFragment.STYLE_NORMAL, R.style.Theme_MyApp_FullScreenDialog);
     }
 
-
     @Override
-    public View onCreateView( LayoutInflater inflater,
-                              ViewGroup container,
-                              Bundle savedInstanceState) {
-
+    public View onCreateView( LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Blås upp layouten för resealternativ
         View rootView = inflater.inflate(R.layout.fragment_rese_alternativ_dialog, container, false);
 
@@ -38,7 +34,6 @@ public class ReseAlternativDialogFragment extends DialogFragment {
         if (closeButton != null) {
             closeButton.setOnClickListener(v -> dismiss()); // stänger dialogen
         }
-
         return rootView;
     }
 

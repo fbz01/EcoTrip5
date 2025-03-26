@@ -5,11 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="200dp"
     android:layout_margin="8dp"
-    app:cardCornerRadius="20dp"
+    android:clickable="false"
     android:elevation="8dp"
-    android:clickable="true"
     android:focusable="true"
-    android:foreground="?android:attr/selectableItemBackground">
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,37 +18,39 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView"
-            android:layout_width="126dp"
-            android:layout_height="123dp"
-            android:elevation="8dp"
-            android:layout_marginStart="188dp"
+            android:layout_width="151dp"
+            android:layout_height="155dp"
+            android:layout_marginStart="215dp"
             android:layout_marginTop="32dp"
-            android:layout_marginEnd="21dp"
-            android:layout_marginBottom="9dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="13dp"
+            android:elevation="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/karta_4" />
+            app:layout_constraintVertical_bias="0.687"
+            app:shapeAppearanceOverlay="@style/RoundedImageShape"
+            app:srcCompat="@drawable/karta_5" />
 
         <TextView
             android:id="@+id/valdResaTitel"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="17dp"
-            android:layout_marginTop="19dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="94dp"
-            android:layout_marginBottom="141dp"
+            android:layout_marginBottom="144dp"
             android:text="En resa"
             android:textColor="@color/colorOnPrimary"
             android:textSize="18sp"
-            android:textStyle="bold"
+            android:textStyle="normal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,16 +58,18 @@
             android:id="@+id/btnSelectTrip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="121dp"
-            android:layout_marginEnd="214dp"
+            android:layout_marginEnd="236dp"
             android:layout_marginBottom="15dp"
             android:text="Välj Resa"
             android:textColor="@color/colorOnPrimary"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.625" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

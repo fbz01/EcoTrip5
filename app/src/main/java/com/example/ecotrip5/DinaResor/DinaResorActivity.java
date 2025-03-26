@@ -27,9 +27,9 @@ public class DinaResorActivity extends BasActivity {
 
         // 3) Initiera listan med resor
         resaList = new ArrayList<>();
-        resaList.add(new Resa("Resa 1: Stockholm - Göteborg"));
-        resaList.add(new Resa("Resa 2: Malmö - Uppsala"));
-        resaList.add(new Resa("Resa 3: Kiruna - Luleå"));
+        resaList.add(new Resa("Hem - Arbete\n5 km"));
+        resaList.add(new Resa("Hem - Centrum\n2.3 km"));
+        resaList.add(new Resa("Hem - Stockholm\n41 km"));
 
         // 4) Hitta RecyclerView
         recyclerView = findViewById(R.id.recycler_resor);

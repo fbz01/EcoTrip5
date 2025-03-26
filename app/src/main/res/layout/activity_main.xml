@@ -66,6 +66,7 @@
         android:layout_marginBottom="390dp"
         android:text="Logga in"
         android:textColor="@color/colorOnPrimary"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

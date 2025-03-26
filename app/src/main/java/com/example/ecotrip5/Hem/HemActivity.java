@@ -21,7 +21,6 @@ public class HemActivity extends BasActivity {
 
         TextView tvChosenTrip = findViewById(R.id.valdResa);
 
-
         if (selectedTrip != null && tvChosenTrip != null) {
             tvChosenTrip.setText(selectedTrip);
         } else {
@@ -34,8 +33,5 @@ public class HemActivity extends BasActivity {
             ReseAlternativDialogFragment dialog = new ReseAlternativDialogFragment();
             dialog.show(getSupportFragmentManager(), "ReseAlternativDialog");
         });
-
     }
-
-
 }
