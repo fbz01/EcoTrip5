@@ -54,7 +54,6 @@ public class BasActivity extends AppCompatActivity {
                         }
                         return true;
                     }
-
                     return false;
                 }
         );
