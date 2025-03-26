@@ -1,7 +1,6 @@
 package com.example.ecotrip5.Hem;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -11,7 +10,6 @@ import com.example.ecotrip5.R;
 
 public class HemActivity extends BasActivity {
 
-    private TextView tvChosenTrip;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +19,7 @@ public class HemActivity extends BasActivity {
 
         String selectedTrip = getIntent().getStringExtra("SELECTED_TRIP");
 
-        TextView tvChosenTrip = findViewById(R.id.tvChosenTrip);
+        TextView tvChosenTrip = findViewById(R.id.valdResa);
 
 
         if (selectedTrip != null && tvChosenTrip != null) {

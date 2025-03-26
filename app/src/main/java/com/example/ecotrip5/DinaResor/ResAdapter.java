@@ -37,7 +37,7 @@ public class ResAdapter extends RecyclerView.Adapter<ResAdapter.TripViewHolder> 
     public void onBindViewHolder( TripViewHolder holder, int position) {
         Resa resa = resaList.get(position);
         Log.d("ResAdapter", "Binding trip: " + resa.getTitle());
-        holder.tvTripTitle.setText(resa.getTitle());
+        holder.valdResaTitel.setText(resa.getTitle());
 
         holder.btnSelectTrip.setOnClickListener(v -> {
             Context context = v.getContext();
@@ -55,12 +55,12 @@ public class ResAdapter extends RecyclerView.Adapter<ResAdapter.TripViewHolder> 
 
     // ViewHolder för en item
     public static class TripViewHolder extends RecyclerView.ViewHolder {
-        TextView tvTripTitle;
+        TextView valdResaTitel;
         Button btnSelectTrip;
 
         public TripViewHolder( View itemView) {
             super(itemView);
-            tvTripTitle = itemView.findViewById(R.id.tvTripTitle);
+            valdResaTitel = itemView.findViewById(R.id.valdResaTitel);
             btnSelectTrip = itemView.findViewById(R.id.btnSelectTrip);
         }
     }
