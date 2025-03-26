@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -37,7 +36,7 @@ public class ResAdapter extends RecyclerView.Adapter<ResAdapter.TripViewHolder> 
     @Override
     public void onBindViewHolder( TripViewHolder holder, int position) {
         Resa resa = resaList.get(position);
-        Log.d("TripAdapter", "Binding trip: " + resa.getTitle());
+        Log.d("ResAdapter", "Binding trip: " + resa.getTitle());
         holder.tvTripTitle.setText(resa.getTitle());
 
         holder.btnSelectTrip.setOnClickListener(v -> {

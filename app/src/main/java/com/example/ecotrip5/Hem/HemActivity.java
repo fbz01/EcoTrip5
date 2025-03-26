@@ -18,41 +18,22 @@ public class HemActivity extends BasActivity {
         super.onCreate(savedInstanceState);
         setContentLayout(R.layout.activity_hem);
         setSelectedNavItem(R.id.nav_first);
-        Log.d("HemActivity", "Extras: " + getIntent().getExtras());
-
-        Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-            for (String key : extras.keySet()) {
-                Log.d("HemActivity", "key=" + key + " => " + extras.get(key));
-            }
-        } else {
-            Log.d("HemActivity", "extras är null.");
-        }
-
 
         String selectedTrip = getIntent().getStringExtra("SELECTED_TRIP");
 
+        TextView tvChosenTrip = findViewById(R.id.tvChosenTrip);
 
-        Log.d("HemActivity", "onCreate - intent extras: " + getIntent().getExtras());
 
-        // Hämta data från Intent
-        TextView tv = findViewById(R.id.tvChosenTrip);
-        if (selectedTrip != null) {
-            tv.setText("Vald resa: " + selectedTrip);
+        if (selectedTrip != null && tvChosenTrip != null) {
+            tvChosenTrip.setText(selectedTrip);
         } else {
-            tv.setText("Ingen resa vald");
+            tvChosenTrip.setText("Ingen resa vald");
         }
 
+        Button reseAlternativKnapp = findViewById(R.id.reseAlternativKnapp);
 
-
-        Button loginButton = findViewById(R.id.btnReseAlternativ);
-
-        // Sätt en klicklyssnare
-        loginButton.setOnClickListener(view -> {
-            // 1) Skapa en instans av din DialogFragment
+        reseAlternativKnapp.setOnClickListener(view -> {
             ReseAlternativDialogFragment dialog = new ReseAlternativDialogFragment();
-
-            // 2) Visa dialogen
             dialog.show(getSupportFragmentManager(), "ReseAlternativDialog");
         });
 
