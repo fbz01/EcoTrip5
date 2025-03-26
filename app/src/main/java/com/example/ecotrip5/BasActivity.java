@@ -36,7 +36,7 @@ public class BasActivity extends AppCompatActivity {
                     if (id == R.id.nav_first) {
                         if (!(BasActivity.this instanceof HemActivity)) {
                             startActivity(new Intent(BasActivity.this, HemActivity.class));
-                            finish(); // valfritt, stänger den nuvarande aktiviteten
+                            finish();
                         }
                         return true;
 

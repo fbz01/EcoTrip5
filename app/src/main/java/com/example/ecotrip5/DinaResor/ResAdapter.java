@@ -2,11 +2,13 @@ package com.example.ecotrip5.DinaResor;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -35,19 +37,16 @@ public class ResAdapter extends RecyclerView.Adapter<ResAdapter.TripViewHolder> 
     @Override
     public void onBindViewHolder( TripViewHolder holder, int position) {
         Resa resa = resaList.get(position);
+        Log.d("TripAdapter", "Binding trip: " + resa.getTitle());
         holder.tvTripTitle.setText(resa.getTitle());
 
-        // Klick på "Välj Resa"-knappen
         holder.btnSelectTrip.setOnClickListener(v -> {
-            // Starta HemActivity (eller vad du nu vill)
-            Context context = v.getContext(); // ger dig en context
+            Context context = v.getContext();
             Intent intent = new Intent(context, HemActivity.class);
+            intent.putExtra("SELECTED_TRIP", resa.getTitle());
             context.startActivity(intent);
-
-            // Om du vill stänga nuvarande aktivitet (om du är i en Activity),
-            // kan du göra:
-            // ((Activity) context).finish();
         });
+
     }
 
     @Override
