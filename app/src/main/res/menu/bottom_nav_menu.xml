@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
     <item
         android:id="@+id/nav_first"
-        android:icon="@drawable/baseline_account_balance_24"
+        android:icon="@drawable/baseline_cottage_24"
         android:title="Hem" />
     <item
         android:id="@+id/nav_second"
-        android:icon="@drawable/baseline_airport_shuttle_24"
+        android:icon="@drawable/baseline_commute_24"
         android:title="Dina resor" />
     <item
         android:id="@+id/nav_third"
-        android:icon="@drawable/baseline_article_24"
+        android:icon="@drawable/baseline_emoji_objects_24"
         android:iconTint="#0C0B0B"
-        android:title="Notiser" />
+        android:title="Tips" />
+
 </menu>

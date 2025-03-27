@@ -1,17 +1,11 @@
-package com.example.ecotrip5.Notiser;
+package com.example.ecotrip5.Tips;
 
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.ecotrip5.BasActivity;
 import com.example.ecotrip5.R;
 
-public class NotiserActivity extends BasActivity {
+public class TipsActivity extends BasActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

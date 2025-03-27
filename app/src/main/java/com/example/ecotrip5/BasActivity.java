@@ -9,7 +9,7 @@ import android.widget.FrameLayout;
 
 import com.example.ecotrip5.DinaResor.DinaResorActivity;
 import com.example.ecotrip5.Hem.HemActivity;
-import com.example.ecotrip5.Notiser.NotiserActivity;
+import com.example.ecotrip5.Tips.TipsActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
@@ -48,8 +48,8 @@ public class BasActivity extends AppCompatActivity {
                         return true;
 
                     } else if (id == R.id.nav_third) {
-                        if (!(BasActivity.this instanceof NotiserActivity)) {
-                            startActivity(new Intent(BasActivity.this, NotiserActivity.class));
+                        if (!(BasActivity.this instanceof TipsActivity)) {
+                            startActivity(new Intent(BasActivity.this, TipsActivity.class));
                             finish();
                         }
                         return true;

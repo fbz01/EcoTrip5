@@ -5,4 +5,12 @@
         <item name="cornerSize">20dp</item>
         <!-- Du kan också göra enbart vissa hörn runda, etc. -->
     </style>
+
+    <style name="BottomNavText.BoldActive" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BottomNavText.BoldInactive" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

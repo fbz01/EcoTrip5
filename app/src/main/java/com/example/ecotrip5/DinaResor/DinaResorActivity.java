@@ -1,6 +1,8 @@
 package com.example.ecotrip5.DinaResor;
 
 import android.os.Bundle;
+import android.widget.Button;
+
 import com.example.ecotrip5.BasActivity;
 import com.example.ecotrip5.R;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DinaResorActivity extends BasActivity {
+public class DinaResorActivity extends BasActivity implements LaggTillResaDialogFragment.ResaDialogListener{
 
     private RecyclerView recyclerView;
     private ResAdapter resAdapter;
@@ -17,19 +19,13 @@ public class DinaResorActivity extends BasActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // 1) Lägg baslayouten i BasActivity
-        // setContentView(R.layout.activity_bas);  // om du har en baslayout
 
-        // 2) Lägg in "activity_dina_resor" i BasActivitys container
-        // (om du använder ditt BasActivity-upplägg)
         setContentLayout(R.layout.activity_dina_resor);
         setSelectedNavItem(R.id.nav_second);
 
         // 3) Initiera listan med resor
         resaList = new ArrayList<>();
-        resaList.add(new Resa("Hem - Arbete\n5 km"));
-        resaList.add(new Resa("Hem - Centrum\n2.3 km"));
-        resaList.add(new Resa("Hem - Stockholm\n41 km"));
+        resaList.add(new Resa("Exempelresa", "Hem", "Arbete", "5 km"));
 
         // 4) Hitta RecyclerView
         recyclerView = findViewById(R.id.recycler_resor);
@@ -42,5 +38,18 @@ public class DinaResorActivity extends BasActivity {
 
         // 7) Koppla adapter till RecyclerView
         recyclerView.setAdapter(resAdapter);
+
+        Button nyResaKnapp = findViewById(R.id.button); // Din "Ny resa"-knapp
+        nyResaKnapp.setOnClickListener(v -> {
+            LaggTillResaDialogFragment dialog = new LaggTillResaDialogFragment();
+            dialog.show(getSupportFragmentManager(), "NyResaDialog");
+        });
+
     }
+    @Override
+    public void onResaLagd(Resa nyResa) {
+        resaList.add(nyResa);
+        resAdapter.notifyItemInserted(resaList.size() - 1);
+    }
+
 }

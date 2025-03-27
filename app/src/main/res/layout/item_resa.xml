@@ -2,9 +2,9 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:layout_margin="8dp"
+    android:layout_width="350dp"
+    android:layout_height="185dp"
+    android:layout_margin="23dp"
     android:clickable="false"
     android:elevation="8dp"
     android:focusable="true"
@@ -13,52 +13,80 @@
     app:cardElevation="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView"
-            android:layout_width="151dp"
-            android:layout_height="155dp"
+            android:layout_width="155dp"
+            android:layout_height="152dp"
             android:layout_marginStart="215dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="13dp"
             android:layout_marginBottom="13dp"
-            android:elevation="4dp"
+            android:elevation="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.687"
+            app:layout_constraintVertical_bias="0.772"
             app:shapeAppearanceOverlay="@style/RoundedImageShape"
-            app:srcCompat="@drawable/karta_5" />
+            app:srcCompat="@drawable/resa" />
 
         <TextView
             android:id="@+id/valdResaTitel"
-            android:layout_width="250dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="94dp"
-            android:layout_marginBottom="144dp"
-            android:text="En resa"
-            android:textColor="@color/colorOnPrimary"
+            android:text="Resans Titel"
             android:textSize="18sp"
-            android:textStyle="normal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            android:textStyle="bold"
+            android:textColor="@color/colorOnPrimary"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <TextView
+            android:id="@+id/startplats"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Från: Start"
+            android:textSize="14sp"
+            android:textColor="@color/colorOnPrimary"
+            app:layout_constraintTop_toBottomOf="@id/valdResaTitel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/slutplats"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Till: Slut"
+            android:textSize="14sp"
+            android:textColor="@color/colorOnPrimary"
+            app:layout_constraintTop_toBottomOf="@id/startplats"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/distans"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Distans: 5 km"
+            android:textSize="14sp"
+            android:textColor="@color/colorOnPrimary"
+            app:layout_constraintTop_toBottomOf="@id/slutplats"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView" />
 
         <Button
             android:id="@+id/btnSelectTrip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="121dp"
             android:layout_marginEnd="236dp"
             android:layout_marginBottom="15dp"

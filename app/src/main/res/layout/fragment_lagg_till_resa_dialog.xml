@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:padding="20dp"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/inputTitel"
+        android:hint="Titel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/inputStart"
+        android:hint="Startplats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/inputSlut"
+        android:hint="Slutdestination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/inputDistans"
+        android:hint="Distans (t.ex. 4.5 km)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
