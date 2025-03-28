@@ -1,7 +1,6 @@
 package com.example.ecotrip5.DinaResor;
 
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,7 +25,7 @@ public class LaggTillResaDialogFragment extends DialogFragment {
         EditText inputTitel = dialogView.findViewById(R.id.inputTitel);
         EditText inputStart = dialogView.findViewById(R.id.inputStart);
         EditText inputSlut = dialogView.findViewById(R.id.inputSlut);
-        EditText inputDistans = dialogView.findViewById(R.id.inputDistans);
+        EditText inputTid = dialogView.findViewById(R.id.inputTid);
 
         return new AlertDialog.Builder(requireContext())
                 .setTitle("Lägg till ny resa")
@@ -35,9 +34,9 @@ public class LaggTillResaDialogFragment extends DialogFragment {
                     String titel = inputTitel.getText().toString();
                     String start = inputStart.getText().toString();
                     String slut = inputSlut.getText().toString();
-                    String distans = inputDistans.getText().toString();
+                    String tid = inputTid.getText().toString();
 
-                    Resa nyResa = new Resa(titel, start, slut, distans);
+                    Resa nyResa = new Resa(titel, start, slut, tid);
 
                     if (getActivity() instanceof ResaDialogListener) {
                         ((ResaDialogListener) getActivity()).onResaLagd(nyResa);

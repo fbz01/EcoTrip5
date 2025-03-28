@@ -25,7 +25,7 @@ public class DinaResorActivity extends BasActivity implements LaggTillResaDialog
 
         // 3) Initiera listan med resor
         resaList = new ArrayList<>();
-        resaList.add(new Resa("Exempelresa", "Hem", "Arbete", "5 km"));
+        resaList.add(new Resa("Exempelresa", "Hem", "Arbete", "08.30"));
 
         // 4) Hitta RecyclerView
         recyclerView = findViewById(R.id.recycler_resor);

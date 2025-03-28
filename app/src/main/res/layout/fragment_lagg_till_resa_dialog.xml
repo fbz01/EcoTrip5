@@ -21,8 +21,8 @@
         android:layout_height="wrap_content"/>
 
     <EditText
-        android:id="@+id/inputDistans"
-        android:hint="Distans (t.ex. 4.5 km)"
+        android:id="@+id/inputTid"
+        android:hint="Tid (t.ex. 12.00)"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 </LinearLayout>

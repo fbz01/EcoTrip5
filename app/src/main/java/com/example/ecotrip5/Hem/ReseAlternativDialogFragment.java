@@ -3,6 +3,8 @@ package com.example.ecotrip5.Hem;
 import android.os.Bundle;
 
 import androidx.fragment.app.DialogFragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +13,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.ecotrip5.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ReseAlternativDialogFragment extends DialogFragment {
 
@@ -51,27 +56,24 @@ public class ReseAlternativDialogFragment extends DialogFragment {
             tvTitle.setText(selectedTrip);
         }
 
-
         // Knapp för att stänga dialogen
         Button closeButton = rootView.findViewById(R.id.btnCloseDialog);
         if (closeButton != null) {
             closeButton.setOnClickListener(v -> dismiss());
         }
 
-        return rootView;
-    }
 
-    // Om du vill göra dialogen bokstavligen fullskärm utan marginaler
-    // kan du även överraska onStart så här:
-    @Override
-    public void onStart() {
-        super.onStart();
-        if (getDialog() != null && getDialog().getWindow() != null) {
-            // Sätt att fönstret ska fylla skärmen
-            getDialog().getWindow().setLayout(
-                    ViewGroup.LayoutParams.MATCH_PARENT,
-                    ViewGroup.LayoutParams.MATCH_PARENT
-            );
-        }
+        List<ReseAlternativ> alternativ = new ArrayList<>();
+        alternativ.add(new ReseAlternativ("Samåkning", "En användare åker bil kl 08:15 och erbjuder samåkning"));
+        alternativ.add(new ReseAlternativ("Kollektivtrafik", "Tåg 11 till hållplats 3. Avgång 07.38"));
+        alternativ.add(new ReseAlternativ("Kollektivtrafik", "Buss 76 till tunnelbana röda linjen. Avgång 08:12."));
+
+        RecyclerView recyclerView = rootView.findViewById(R.id.recyclerViewAlternativ);
+        ReseAlternativAdapter adapter = new ReseAlternativAdapter(alternativ);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+
+        return rootView;
     }
 }

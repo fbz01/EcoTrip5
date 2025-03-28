@@ -4,17 +4,17 @@ public class Resa {
     private String title;
     private String start;
     private String end;
-    private String distance;
+    private String tid;
 
-    public Resa(String title, String start, String end, String distance) {
+    public Resa(String title, String start, String end, String tid) {
         this.title = title;
         this.start = start;
         this.end = end;
-        this.distance = distance;
+        this.tid = tid;
     }
     public String getTitle(){ return title; }
     public String getStart() { return start; }
     public String getEnd() { return end; }
-    public String getDistance() { return distance; }
+    public String getTid() { return tid; }
 }
 

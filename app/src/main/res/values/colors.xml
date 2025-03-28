@@ -9,4 +9,8 @@
     <color name="colorBackground">#FFFDF6</color>
     <color name="colorOnPrimary">#4F4B4B</color>
     <color name="colorOnSecondary">#000000</color>
+
+    <color name="green_700">#D7F4D8</color>         <!-- Samåkning -->
+    <color name="blue_700">#CBDFF8</color>         <!-- Kollektivtrafik -->
+
 </resources>

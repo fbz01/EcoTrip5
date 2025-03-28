@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"
@@ -13,7 +15,7 @@
         android:theme="@style/Base.Theme.EcoTrip5"
         tools:targetApi="31">
         <activity
-            android:name=".Tips.TipsActivity"
+            android:name=".Tips.StopsActivity"
             android:exported="false" />
         <activity
             android:name=".Hem.HemActivity"
