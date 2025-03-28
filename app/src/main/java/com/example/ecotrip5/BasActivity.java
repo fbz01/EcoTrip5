@@ -59,17 +59,11 @@ public class BasActivity extends AppCompatActivity {
         );
     }
 
-    /**
-     * Hjälpfunktion för att "injicera" barnaktivitetens layout i container.
-     * Vi använder layoutinflater för att infoga den i vår FrameLayout (container).
-     */
+
     protected void setContentLayout(int layoutResID) {
         getLayoutInflater().inflate(layoutResID, container, true);
     }
 
-    /**
-     * Kan anropas av underklasser för att sätta rätt val på nav-baren.
-     */
     protected void setSelectedNavItem(int itemId) {
         bottomNavigationView.setSelectedItemId(itemId);
     }

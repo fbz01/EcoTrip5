@@ -6,7 +6,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,18 +21,15 @@ public class ReseAlternativAdapter extends RecyclerView.Adapter<ReseAlternativAd
         this.lista = lista;
     }
 
-    @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_rese_alternativ, parent, false);
         return new ViewHolder(v);
     }
 
-
-
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder( ViewHolder holder, int position) {
         ReseAlternativ alternativ = lista.get(position);
         holder.typ.setText(alternativ.getTyp());
         holder.beskrivning.setText(alternativ.getBeskrivning());
@@ -81,7 +77,7 @@ public class ReseAlternativAdapter extends RecyclerView.Adapter<ReseAlternativAd
         ImageView icon;
         CardView cardRoot;
 
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder( View itemView) {
             super(itemView);
             typ = itemView.findViewById(R.id.typText);
             beskrivning = itemView.findViewById(R.id.beskrivningText);

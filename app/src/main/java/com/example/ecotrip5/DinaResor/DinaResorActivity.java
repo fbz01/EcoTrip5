@@ -39,11 +39,10 @@ public class DinaResorActivity extends BasActivity implements LaggTillResaDialog
         // 7) Koppla adapter till RecyclerView
         recyclerView.setAdapter(resAdapter);
 
-        Button nyResaKnapp = findViewById(R.id.button); // Din "Ny resa"-knapp
-        nyResaKnapp.setOnClickListener(v -> {
-            LaggTillResaDialogFragment dialog = new LaggTillResaDialogFragment();
-            dialog.show(getSupportFragmentManager(), "NyResaDialog");
-        });
+        Button nyResaKnapp = findViewById(R.id.button);
+        nyResaKnapp.setOnClickListener(v ->
+                new LaggTillResaDialogFragment().show(getSupportFragmentManager(), "NyResaDialog")
+        );
 
     }
     @Override

@@ -12,8 +12,5 @@ public interface ResRobotApi {
             @Query("originCoordLong") double lon,
             @Query("format") String format
     );
-
-
-
 }
 

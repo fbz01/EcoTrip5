@@ -62,7 +62,6 @@ public class StopsActivity extends BasActivity {
                                         stopList.add(stop);
                                     }
                                 }
-
                                 adapter.notifyDataSetChanged();
                             } else {
                                 Toast.makeText(StopsActivity.this, "Inga hållplatser hittades.", Toast.LENGTH_SHORT).show();

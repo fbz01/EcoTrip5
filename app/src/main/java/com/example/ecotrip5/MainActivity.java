@@ -15,16 +15,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Knapp för att "Logga in" och gå vidare till HemActivity
+        // Knapp för att "Logga in" och gå vidare till HemActivity
         Button loggaIn = findViewById(R.id.loggaInKnapp);
 
-        loggaIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, HemActivity.class);
-
-                startActivity(intent);
-                finish();
-            }
+        loggaIn.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, HemActivity.class);
+            startActivity(intent);
+            finish();
         });
     }
 }
