@@ -23,59 +23,71 @@ public class StopsActivity extends BasActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentLayout(R.layout.activity_notiser);
+        // Infoga layouten för aktiviteten i container-vyn från BasActivity
+        setContentLayout(R.layout.activity_stops);
+        // Markera den tredje navigationsikonen
         setSelectedNavItem(R.id.nav_third);
 
+        // Hitta recyclerview i layouten och sätt linjär layout
         RecyclerView recyclerView = findViewById(R.id.stopsRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        // Skapa en lista som ska fyllas med hållplatser
         List<StopLocation> stopList = new ArrayList<>();
+        // Skapa adapter med listan och koppla till recyclerview
         StopAdapter adapter = new StopAdapter(stopList);
         recyclerView.setAdapter(adapter);
 
-        // Retrofit-instans
+        // Retrofit-instans för att kommunicera med ResRobot API
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://api.resrobot.se/")
-                .addConverterFactory(GsonConverterFactory.create())
+                .baseUrl("https://api.resrobot.se/") // Bas URL för API:et
+                .addConverterFactory(GsonConverterFactory.create()) // Gson för JSON konvertering
                 .build();
 
+        // Skapa en instans av API gränssnittet
         ResRobotApi api = retrofit.create(ResRobotApi.class);
 
-        // Position för att visa hållplatser (ex: Västervik)
+        // Longitut och latitud för position där närliggande hållplatser ska visas
         double lat = 57.7552;
         double lon = 16.6411;
 
-        // Hämta hållplatser nära angiven position
+        // Anropa API:et för att hämta närliggande stoppplatser och hantera svaret asynkront
         api.getNearbyStops("91bfd389-00bb-428c-885e-be18d887344a", lat, lon, "json")
                 .enqueue(new Callback<LocationResponse>() {
                     @Override
                     public void onResponse(Call<LocationResponse> call, Response<LocationResponse> response) {
+                        // Kontrollera om API svaret lyckas
                         if (response.isSuccessful()) {
                             LocationResponse data = response.body();
+                            // Kontrollera att datan är giltig och listan inte är null
                             if (data != null && data.getStopLocationOrCoordLocation() != null) {
                                 List<WrappedStopLocation> wrappedList = data.getStopLocationOrCoordLocation();
-
+                                // Rensa listan innan ny data läggs till
                                 stopList.clear();
+                                // Iterera igenom varje stopplats-objekt
                                 for (WrappedStopLocation wrapped : wrappedList) {
                                     StopLocation stop = wrapped.getStopLocation();
                                     if (stop != null) {
                                         stopList.add(stop);
                                     }
                                 }
+                                // Meddela adaptern att data har ändrats så vyn kan uppdateras
                                 adapter.notifyDataSetChanged();
                             } else {
+                                // Visa en toast meddelande om inga hållplatser hittats
                                 Toast.makeText(StopsActivity.this, "Inga hållplatser hittades.", Toast.LENGTH_SHORT).show();
                             }
                         } else {
+                            // Visa toast meddelande om api svaret misslyckats med status kod
                             Toast.makeText(StopsActivity.this, "API-svar misslyckades: " + response.code(), Toast.LENGTH_SHORT).show();
                         }
                     }
 
                     @Override
                     public void onFailure(Call<LocationResponse> call, Throwable t) {
+                        // Vid fel, visa toast meddelande med felinformation
                         Toast.makeText(StopsActivity.this, "Fel vid hämtning: " + t.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
     }
 }
-

@@ -16,14 +16,16 @@ import com.example.ecotrip5.R;
 import java.util.List;
 
 public class ResAdapter extends RecyclerView.Adapter<ResAdapter.TripViewHolder> {
-
+    // Lista med resor som ska visas i recyclerview
     private List<Resa> resaList;
 
+    // Konstruktor för adaptern med en lista av resor
     public ResAdapter(List<Resa> resaList) {
         this.resaList = resaList;
     }
 
 
+    // Skapa en ny viewholder
     @Override
     public TripViewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
         // Blås upp layouten för en item (item_resa.xml)
@@ -32,32 +34,39 @@ public class ResAdapter extends RecyclerView.Adapter<ResAdapter.TripViewHolder> 
         return new TripViewHolder(view);
     }
 
+    // Binder data från ett resa-objekt till en viewholder
     @Override
     public void onBindViewHolder(TripViewHolder holder, int position) {
+        // Hämta resan från positionen
         Resa resa = resaList.get(position);
+        // Sätt textview baserat på resans data
         holder.valdResaTitel.setText(resa.getTitle());
         holder.startplats.setText("Från: " + resa.getStart());
         holder.slutplats.setText("Till: " + resa.getEnd());
         holder.distans.setText("Tid: " + resa.getTid());
 
+        // Sätt klick-lyssnare på knappen för att välja resan
         holder.btnSelectTrip.setOnClickListener(v -> {
             Context context = v.getContext();
+            // Intent för att starta HemActivity
             Intent intent = new Intent(context, HemActivity.class);
+            // Skicka med resans information till HemActivity
             intent.putExtra("SELECTED_TRIP", resa.getTitle());
             intent.putExtra("TRIP_START", resa.getStart());
             intent.putExtra("TRIP_END", resa.getEnd());
             intent.putExtra("TRIP_TIME", resa.getTid());
-            // Du kan lägga till mer info här
+            // Starta HemActivity
             context.startActivity(intent);
         });
     }
 
+    // Funktion för antal resor i listan
     @Override
     public int getItemCount() {
         return resaList.size();
     }
 
-    // ViewHolder för en item
+    // ViewHolder med referenserna till vyer i en item layout
     public static class TripViewHolder extends RecyclerView.ViewHolder {
         TextView valdResaTitel;
         TextView startplats;
@@ -65,6 +74,7 @@ public class ResAdapter extends RecyclerView.Adapter<ResAdapter.TripViewHolder> 
         TextView distans;
         Button btnSelectTrip;
 
+        // Konstruktor för vy referenserna
         public TripViewHolder(View itemView) {
             super(itemView);
             valdResaTitel = itemView.findViewById(R.id.valdResaTitel);
