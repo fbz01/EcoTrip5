@@ -9,6 +9,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
+// -------------------------------------------------------------
+// Denna aktivitet har utvecklats med stöd av ChatGPT (OpenAI).
+// ChatGPT användes för att:
+// – Implementera dialogfragment för att lägga till ny resa
+// -------------------------------------------------------------
 
 public class DinaResorActivity extends BasActivity implements LaggTillResaDialogFragment.ResaDialogListener{
 

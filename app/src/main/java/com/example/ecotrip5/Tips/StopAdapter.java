@@ -11,6 +11,11 @@ import com.example.ecotrip5.R;
 
 import java.util.List;
 
+// -------------------------------------------------------------
+// Denna fil innehåller kod skapad eller modifierad med stöd av ChatGPT (OpenAI).
+// ChatGPT användes för att skapa adapterstrukturen för RecyclerView, inklusive
+// ViewHolder, layoutinflation och bindning av data till vyer.
+// -------------------------------------------------------------
 
 public class StopAdapter extends RecyclerView.Adapter<StopAdapter.StopViewHolder> {
 

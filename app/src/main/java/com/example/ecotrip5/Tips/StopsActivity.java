@@ -18,6 +18,15 @@ import retrofit2.Response;
 import retrofit2.Call;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+// -------------------------------------------------------------
+// Denna aktivitet har utvecklats med stöd av ChatGPT (OpenAI).
+// ChatGPT användes för att:
+// – Strukturera onCreate-metoden och RecyclerView-flödet
+// – Implementera Retrofit-anrop mot ResRobot API
+// – Felsöka API-svar och hantera olika felkoder
+// – Kommentera och förklara koden i pedagogisk stil
+// -------------------------------------------------------------
+
 public class StopsActivity extends BasActivity {
 
     @Override

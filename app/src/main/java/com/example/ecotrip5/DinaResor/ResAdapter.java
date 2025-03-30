@@ -14,6 +14,11 @@ import com.example.ecotrip5.Hem.HemActivity;
 import com.example.ecotrip5.R;
 
 import java.util.List;
+// -------------------------------------------------------------
+// Denna RecyclerView-adapter har utvecklats med stöd av ChatGPT (OpenAI).
+// ChatGPT användes för att:
+// – Skicka vidare valt resa-objekt till HemActivity via Intent
+// -------------------------------------------------------------
 
 public class ResAdapter extends RecyclerView.Adapter<ResAdapter.TripViewHolder> {
     // Lista med resor som ska visas i recyclerview

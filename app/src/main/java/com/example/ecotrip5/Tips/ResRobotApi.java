@@ -4,6 +4,12 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
+// -------------------------------------------------------------
+// Denna interface-definition har skapats med stöd av ChatGPT (OpenAI).
+// ChatGPT användes för att tolka API-dokumentationen och generera korrekt Retrofit-anrop
+// för SL/ResRobot "location.nearbystops"-endpoint.
+// -------------------------------------------------------------
+
 public interface ResRobotApi {
     /**
      * Hämtar en lista med närliggande busshållsplatser baserat på angivna koordinater.

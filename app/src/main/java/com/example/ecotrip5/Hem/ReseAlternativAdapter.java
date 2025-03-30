@@ -13,6 +13,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.ecotrip5.R;
 
 import java.util.List;
+// -------------------------------------------------------------
+// Denna adapter har utvecklats med stöd från ChatGPT (OpenAI).
+// ChatGPT användes för att:
+// – Strukturera RecyclerView-adaptern och ViewHolder-logiken
+// – Implementera en kombinerad slide-in + pop-animation
+// -------------------------------------------------------------
 
 public class ReseAlternativAdapter extends RecyclerView.Adapter<ReseAlternativAdapter.ViewHolder> {
     // Lista med ReseAlternativ
@@ -59,7 +65,7 @@ public class ReseAlternativAdapter extends RecyclerView.Adapter<ReseAlternativAd
                 break;
         }
 
-        // Animation för korten, starta utanför skärmen och flyttas in
+        // Kod för animerad slide-in och pop-effekt
         holder.itemView.setTranslationX(700f);
         holder.itemView.setScaleX(0.8f);
         holder.itemView.setScaleY(0.8f);

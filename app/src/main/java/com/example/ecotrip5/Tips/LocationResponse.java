@@ -4,6 +4,11 @@ import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 
+// -------------------------------------------------------------
+// Denna klass har utformats och dokumenterats med stöd av ChatGPT (OpenAI).
+// Kodstödet har använts för att skapa strukturen för API-svaret samt JavaDoc-kommentarerna.
+// -------------------------------------------------------------
+
 /*
  * Representerar svaret från en platsbaserad API-förfrågan.
  * Klassen innehåller en lista med WrappedStopLocation-objekt som kan vara antingen

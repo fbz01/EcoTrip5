@@ -12,6 +12,13 @@ import android.widget.TextView;
 import com.example.ecotrip5.R;
 import java.util.ArrayList;
 import java.util.List;
+// -------------------------------------------------------------
+// Denna dialogfragmentklass har utvecklats med stöd av ChatGPT (OpenAI).
+// ChatGPT användes för att:
+// – Strukturera fragmentets livscykel och argumenthantering
+// – Dynamiskt visa vald resa i ett inkluderat kort
+// Datum: 2025-03-28
+// -------------------------------------------------------------
 
 public class ReseAlternativDialogFragment extends DialogFragment {
 

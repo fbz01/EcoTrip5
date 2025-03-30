@@ -11,6 +11,11 @@ import com.example.ecotrip5.DinaResor.DinaResorActivity;
 import com.example.ecotrip5.Hem.HemActivity;
 import com.example.ecotrip5.Tips.StopsActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+// -------------------------------------------------------------
+// Denna basaktivitet har strukturerats med stöd av ChatGPT (OpenAI).
+// ChatGPT användes för att:
+// – Skapa en återanvändbar aktivitet med BottomNavigationView
+// -------------------------------------------------------------
 
 
 public class BasActivity extends AppCompatActivity {

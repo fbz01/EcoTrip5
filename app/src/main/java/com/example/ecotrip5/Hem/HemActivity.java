@@ -8,6 +8,12 @@ import java.util.Random;
 
 import com.example.ecotrip5.BasActivity;
 import com.example.ecotrip5.R;
+// -------------------------------------------------------------
+// Denna aktivitet har utvecklats med stöd av ChatGPT (OpenAI).
+// ChatGPT användes för att:
+// – Visa hållbarhetsfakta med slumpad text
+// – Styra synlighet och aktivering av UI-komponenter
+// -------------------------------------------------------------
 
 public class HemActivity extends BasActivity {
 
